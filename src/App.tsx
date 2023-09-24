@@ -5,6 +5,7 @@ import {store, sagaMiddleware} from 'reduxsaga/store'
 import { Provider } from "react-redux"
 import { PersistGate } from "redux-persist/integration/react"
 import { persistStore } from "redux-persist"
+import { ThemeProvider, createTheme } from '@rneui/themed'
 import Toast, { ErrorToast, SuccessToast } from "react-native-toast-message"
 import {LogBox} from 'react-native'
 import { RootStackNavigator } from "navigators"
@@ -15,6 +16,13 @@ sagaMiddleware.run(rootSaga)
 LogBox.ignoreLogs([
     'react-i18next:: You will need to pass in an i18next instance by using initReactI18next'
 ])
+
+const elementTheme = createTheme({
+    components: {
+        Input: {},
+        Button: {}
+    }
+})
 
 const MyTheme = {
     ...DefaultTheme,
@@ -28,9 +36,11 @@ export default () => {
     return (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistStore(store)}>
-                <NavigationContainer theme={MyTheme}>
-                    <RootStackNavigator/>
-                </NavigationContainer>
+                <ThemeProvider theme={elementTheme}>
+                    <NavigationContainer theme={MyTheme}>
+                        <RootStackNavigator/>
+                    </NavigationContainer>
+                </ThemeProvider>
             </PersistGate>
             <Toast
           config={{
