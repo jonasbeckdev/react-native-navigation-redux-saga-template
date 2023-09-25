@@ -79,13 +79,20 @@ async function axiosPost<T>(url: string, data: any, authentication?: boolean) {
         headers['Authorization'] = `Bearer ${token}`
     }
     console.log('url:', url)
-    const result = await axios.post<IApiResponse<T>>(url, data, {
-        headers
-    })
-    if (result.data.success == false) {
-        throw result.data
+    try {
+        const result = await axios.post<IApiResponse<T>>(url, data, {
+            headers
+        })
+        if (result.data.success == false) {
+            throw result.data
+        }
+        return result.data.data
+    } catch (exception: any) {
+        if (axios.isAxiosError(exception)) {
+            throw exception.response?.data
+        }
+        throw exception
     }
-    return result.data.data
 }
 
 async function axiosGet<T>(url: string, authentication?: boolean) {
