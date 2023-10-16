@@ -8,7 +8,6 @@ module.exports = {
                     assets: "./src/assets",
                     dist: "./src/assets/dist",
                     components: "./src/components",
-                    hooks: "./src/hooks",
                     screens: "./src/screens",
                     models: "../src/models",
                     reduxsaga: "./src/redux",
