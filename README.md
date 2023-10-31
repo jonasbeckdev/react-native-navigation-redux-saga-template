@@ -7,8 +7,8 @@ yarn add --dev pod-install react-native-rename patch-package postinstall-postins
 npx react-native-rename "React Native Template" -b com.rn.template
 
 "postinstall": "pod-install && patch-package",
-"release": "cd android && gradlew assembleRelease",
-"aab": "cd android && gradlew bundleRelease"
+"release": "cd android && ./gradlew assembleRelease",
+"aab": "cd android && ./gradlew bundleRelease"
 
 setProperty("archivesBaseName", "app-v" + versionName + "(" + versionCode + ")")
 
