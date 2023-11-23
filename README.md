@@ -1,6 +1,6 @@
 npx react-native init react_native_template
 
-yarn add react-native-safe-area-context @reduxjs/toolkit redux-saga redux @react-native-async-storage/async-storage redux-persist redux-saga react-i18next react-native-toast-message moment @react-navigation/native react-redux @react-navigation/stack i18next react-native-safe-area-context react-native-gesture-handler @react-navigation/native-stack react-native-screens axios @react-navigation/bottom-tabs @rneui/base@edge @rneui/themed@edge react-native-vector-icons
+yarn add react-native-safe-area-context @reduxjs/toolkit redux-saga redux @react-native-async-storage/async-storage redux-persist redux-saga react-i18next react-native-toast-message moment @react-navigation/native react-redux @react-navigation/stack i18next react-native-safe-area-context react-native-gesture-handler @react-navigation/native-stack react-native-screens axios @react-navigation/bottom-tabs @rneui/base@edge @rneui/themed@edge react-native-vector-icons react-native-reanimated
 
 yarn add --dev pod-install react-native-rename patch-package postinstall-postinstall babel-plugin-module-resolver
 
