@@ -7,9 +7,9 @@ type TabStackParam = {
 const Tab = createBottomTabNavigator<TabStackParam>()
 
 export function TabNavigator() {
-    return (
-        <Tab.Navigator>
-        </Tab.Navigator>
-    )
+  return (
+    <Tab.Navigator>
+    </Tab.Navigator>
+  )
 }
 

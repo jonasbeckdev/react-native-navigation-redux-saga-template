@@ -1,4 +1,5 @@
-export * from './RootStackNavigator'
+export * from './SplashStackNavigator'
+export * from './AuthenticateStackNavigator'
 export * from './LoginStackNavigator'
 export * from './HomeStackNavigator'
 export * from './TabNavigator'
