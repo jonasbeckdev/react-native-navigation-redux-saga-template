@@ -14,22 +14,22 @@ import { appColors } from "assets"
 sagaMiddleware.run(rootSaga)
 
 LogBox.ignoreLogs([
-    'react-i18next:: You will need to pass in an i18next instance by using initReactI18next'
+  'react-i18next:: You will need to pass in an i18next instance by using initReactI18next'
 ])
 
 const elementTheme = createTheme({
-    components: {
-        Input: {},
-        Button: {}
-    }
+  components: {
+    Input: {},
+    Button: {}
+  }
 })
 
 const MyTheme = {
-    ...DefaultTheme,
-    colors: {
-        ...DefaultTheme.colors,
-        primary: appColors.main
-    }
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: appColors.main
+  }
 }
 
 export default () => {
